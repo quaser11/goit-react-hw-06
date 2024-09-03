@@ -4,7 +4,7 @@ import {SubmitButton, Input, Error, ContactsForm} from './ContactForm.styled.js'
 import PropTypes from "prop-types";
 import * as Yup from 'yup';
 import {useDispatch} from 'react-redux';
-import {addContact} from "../../redux/contactsSlice.js";
+import {addContact} from "../../redux/contactsOps.js";
 
 const validationSchema = Yup.object({
     name: Yup.string().min(3, 'Name too short!').max(50, 'Name too long!').required('Please enter your name'),
