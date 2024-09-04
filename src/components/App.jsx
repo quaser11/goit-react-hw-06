@@ -13,16 +13,12 @@ function App() {
         dispatch(fetchContacts());
     }, [dispatch])
 
-    const isLoading = useSelector(state => state.contacts.loading)
-    const error = useSelector(state => state.contacts.error)
-    const visibleNumbers = useSelector(selectVisibleNumbers);
 
-    console.log(visibleNumbers)
     return (
         <>
             <ContactForm/>
             <SearchBox/>
-            <ContactList visibleNumbers={visibleNumbers} isLoading={isLoading} error={error} />
+            <ContactList/>
         </>
     )
 }
